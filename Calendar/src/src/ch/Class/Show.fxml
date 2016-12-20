@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" focusTraversable="false" maxHeight="-1.0" maxWidth="-1.0" minHeight="606.0" minWidth="1155.0" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="src.ch.Class.ShowController">
+  <children>
+    <Button layoutX="582.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="104.0" text="PDF EXPORT" />
+    <Button layoutX="820.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="PRINT" />
+    <Button layoutX="1058.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="SAVE" />
+    <Button layoutX="14.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="130.0" text="PICTURE UPLOAD" />
+    <TabPane layoutX="541.0" layoutY="27.0" prefHeight="471.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="January">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Feburary">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="March">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="April">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="May">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="June">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="August">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="September">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Octobre">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="November">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="December">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <TabPane layoutX="14.0" layoutY="27.0" prefHeight="471.0" prefWidth="406.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Templates">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#template1" prefHeight="80.0" prefWidth="80.0" text="" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffffff00" focusTraversable="true" height="48.000091552734375" layoutX="24.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" focusTraversable="true" height="20.0" layoutX="24.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+                  <fill>
+                    <Color blue="1.000" green="0.565" opacity="0.000" red="0.118" fx:id="x1" />
+                  </fill>
+                </Rectangle>
+                <Button layoutX="113.0" layoutY="14.0" mnemonicParsing="false" onAction="#template2" prefHeight="80.0" prefWidth="80.0" text="" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="$x1" focusTraversable="true" height="30.0" layoutX="123.0" layoutY="54.0" mouseTransparent="false" smooth="true" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="$x1" focusTraversable="true" height="30.0" layoutX="153.0" layoutY="54.0" mouseTransparent="false" smooth="true" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="$x1" focusTraversable="true" height="20.0" layoutX="123.0" layoutY="21.0" mouseTransparent="false" smooth="true" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Pictures">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+  <padding>
+    <Insets />
+  </padding>
+</AnchorPane>
