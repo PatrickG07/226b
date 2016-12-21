@@ -29,6 +29,7 @@ public class Start extends Application{
 		primaryStage.centerOnScreen();
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		primaryStage.setX(d.width/2-(primaryStage.getWidth()));
 		primaryStage.setY(d.width/2-(primaryStage.getWidth()));
