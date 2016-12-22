@@ -12,22 +12,20 @@
 
 <AnchorPane id="AnchorPane" fx:id="root" focusTraversable="false" maxHeight="-1.0" maxWidth="-1.0" minHeight="606.0" minWidth="1155.0" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="src.ch.Class.ShowController">
   <children>
-    <Button layoutX="582.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="104.0" text="PDF EXPORT" />
-    <Button layoutX="820.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="PRINT" />
+    <Button layoutX="582.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" onAction="#export" prefHeight="38.0" prefWidth="104.0" text="PDF EXPORT" />
     <Button layoutX="1058.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="SAVE" />
-    <Button layoutX="14.0" layoutY="538.0" minHeight="19.0" mnemonicParsing="false" onAction="#upload" prefHeight="38.0" prefWidth="130.0" text="PICTURE UPLOAD" />
-    <TabPane id="TP" fx:id="tp" layoutX="541.0" layoutY="27.0" prefHeight="471.0" prefWidth="600.0" rotateGraphic="false" tabClosingPolicy="UNAVAILABLE" visible="true">
+    <TabPane id="TP" fx:id="tp" layoutX="502.0" layoutY="27.0" prefHeight="471.0" prefWidth="639.0" rotateGraphic="false" tabClosingPolicy="UNAVAILABLE" visible="true">
       <tabs>
-        <Tab closable="true" text="january">
+        <Tab closable="true" text="January">
           <content>
-            <AnchorPane id="Content" fx:id="january" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <ImageView id="PIC1" fx:id="image1" disable="false" fitHeight="207.0" fitWidth="276.0" focusTraversable="false" layoutX="15.0" layoutY="108.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" smooth="true" visible="true" x="0.0">
+                <ImageView id="PIC1" fx:id="JanuaryP1" disable="false" fitHeight="207.0" fitWidth="276.0" focusTraversable="false" layoutX="15.0" layoutY="108.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" smooth="true" visible="true" x="0.0">
                   <image>
                     <Image url="@../images/blackground.png" />
                   </image>
                 </ImageView>
-                <ImageView id="PIC2" fx:id="image2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" layoutY="108.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true">
+                <ImageView id="PIC2" fx:id="JanuaryP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" layoutY="108.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true">
                   <image>
                     <Image url="@../images/blackground.png" />
                   </image>
@@ -45,12 +43,12 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <ImageView id="PIC1" fx:id="image1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="15.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                <ImageView id="PIC1" fx:id="FeburaryP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
                   <image>
                     <Image url="@../images/blackground.png" />
                   </image>
                 </ImageView>
-                <ImageView id="PIC2" fx:id="image2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                <ImageView id="PIC2" fx:id="FeburaryP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
                   <image>
                     <Image url="@../images/blackground.png" />
                   </image>
@@ -62,47 +60,192 @@
         </Tab>
         <Tab text="March">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="MarchP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="MarchP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="April">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="AprilP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="AprilP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="May">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="MayP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="MayP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="June">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="JuneP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="JuneP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="July">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="JulyP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="JulyP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="August">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="AugustP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="AugustP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="September">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="SeptemberP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="SeptemberP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
-        <Tab text="Octobre">
+        <Tab text="October">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="OctoberP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="OctoberP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="November">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="NovemberP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="NovemberP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="December">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="PIC1" fx:id="DecemberP1" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="14.0" mouseTransparent="false" onMouseClicked="#imagek1" pickOnBounds="true" preserveRatio="false" visible="true" x="0.0" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <ImageView id="PIC2" fx:id="DecemberP2" disable="false" fitHeight="207.0" fitWidth="276.0" layoutX="310.0" onMouseClicked="#imagek2" pickOnBounds="true" preserveRatio="false" visible="true" AnchorPane.topAnchor="108.0">
+                  <image>
+                    <Image url="@../images/blackground.png" />
+                  </image>
+                </ImageView>
+                <Label font="$x3" layoutX="260.0" layoutY="44.0" text="Feburary" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
       </tabs>
@@ -132,15 +275,14 @@
             </AnchorPane>
           </content>
         </Tab>
-        <Tab text="Pictures">
-          <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-          </content>
-        </Tab>
       </tabs>
     </TabPane>
-    <TextField id="TFJ" fx:id="tfj" layoutX="331.0" layoutY="545.0" prefHeight="25.0" prefWidth="122.0" />
-    <Label layoutX="290.0" layoutY="550.0" text="Jahr" />
+    <TextField id="TFJ" fx:id="textjear" layoutX="915.0" layoutY="545.0" prefHeight="25.0" prefWidth="122.0" />
+    <Label fx:id="labelYear" layoutX="857.0" layoutY="545.0" text="YEAR">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
   </children>
   <padding>
     <Insets />

@@ -19,7 +19,10 @@ public class Start extends Application{
 	public static void main(String... args) {
 		launch(args);
 	}
-	
+	/**
+	 * change the scene to main.fxml and set the title to Calendar
+	 * and set the window in the center of the screen
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
@@ -37,7 +40,7 @@ public class Start extends Application{
 		mainStage = primaryStage;
 	}
 	/**
-	 * wechselt die scene inerhalb des Progamms.
+	 * change the scenes in the Progamms.
 	 */
 	public static void loadScene(String name) {
 		Parent parentToLoad = null;
