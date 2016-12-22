@@ -1,0 +1,26 @@
+package src.ch.P1.Class;
+
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Window {
+	
+	private Stage stage;
+	private Template template = new StandartTemplate();
+
+	public Window(Stage stage){
+		this.stage = stage;
+		stage.show();
+	}
+	public void setWindow(String window){
+		Group g = new Group();
+		
+		if(window == "start"){
+			g.getChildren().add(template.getPane());
+		}
+		
+		Scene scene = new Scene(g);
+		stage.setScene(scene);
+	}
+}

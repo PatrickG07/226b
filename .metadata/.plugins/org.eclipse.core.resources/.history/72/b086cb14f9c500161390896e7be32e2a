@@ -1,0 +1,43 @@
+package ch.P1.Class;
+
+import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+	public Stage primaryStage;
+
+	@Override
+	public void start(Stage primaryStage) {
+		this.primaryStage = primaryStage;
+		mainWindow();
+	}
+
+	public void mainWindow() {
+		try {
+			FXMLLoader loader = new FXMLLoader(
+					Main.class.getResource("ch.P1.FX.Main.fxml"));
+			AnchorPane pane = loader.load();
+
+			StartController controller = loader.getController();
+			controller.setMain(this);
+
+			Scene scene = new Scene(pane);
+
+			primaryStage.setScene(scene);
+			primaryStage.show();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

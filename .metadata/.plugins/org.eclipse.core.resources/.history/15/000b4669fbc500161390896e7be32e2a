@@ -1,0 +1,11 @@
+package ch.P1.Class;
+
+import javafx.fxml.FXML;
+
+public class StartController {
+	
+	@FXML
+	public void edit(ActionEvent event){
+		
+	}
+}

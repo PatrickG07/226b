@@ -1,0 +1,9 @@
+package src.ch.P1.Class;
+
+import javafx.stage.Stage;
+
+public interface ViewController {
+
+	abstract void init(Stage stage);
+	
+}

@@ -1,0 +1,19 @@
+package src.ch.P1.Class;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+
+public class Load extends Application{
+
+	public static void main(String[] args) {
+		launch(args);
+
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		Window window = new Window();
+		window.setWindow("start");
+	}
+}

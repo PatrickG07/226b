@@ -1,0 +1,6 @@
+package ch.P1.Class;
+
+public class StartController {
+	@FXML
+	public void edit(ActionEvent event){
+}

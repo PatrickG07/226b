@@ -1,0 +1,12 @@
+package ch.P1.Class;
+
+public class StartController {
+
+	
+	
+	public void setMain(Main main) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

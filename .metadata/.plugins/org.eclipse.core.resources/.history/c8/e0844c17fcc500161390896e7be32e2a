@@ -1,0 +1,25 @@
+package ch.csbe.henkersspiel;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Start extends Application{
+
+	public static Stage fenster;
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		fenster = primaryStage;
+		spiel();
+	}
+	
+	public static void spiel() throws Exception{
+		Fenster.fenster("startfenster");
+		Wortkontroller.setrichtig(0);
+		Wortkontroller.setfalsch(0);
+	}
+}
