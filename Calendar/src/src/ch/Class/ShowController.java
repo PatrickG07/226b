@@ -1,7 +1,8 @@
 package src.ch.Class;
-
+/**
+ * @author Patrick Gartenmann
+ */
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -24,11 +25,8 @@ import javafx.stage.FileChooser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.graphics.image.PDImage;
-
-import java.io.FileInputStream;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
 public class ShowController {
 	@FXML
@@ -93,24 +91,24 @@ public class ShowController {
 	String month;
 	String date;
 	String test = "January";
-	int JanuaryT = 1;
-	int FeburaryT = 1;
-	int MarchT = 1;
-	int AprilT = 1;
-	int MayT = 1;
-	int JuneT = 1;
-	int JulyT = 1;
-	int AugustT = 1;
-	int SeptemberT = 1;
-	int OctoberT = 1;
-	int NovemberT = 1;
-	int DecemberT = 1;
+	int JanuaryT = 2;
+	int FeburaryT = 2;
+	int MarchT = 2;
+	int AprilT = 2;
+	int MayT = 2;
+	int JuneT = 2;
+	int JulyT = 2;
+	int AugustT = 2;
+	int SeptemberT = 2;
+	int OctoberT = 2;
+	int NovemberT = 2;
+	int DecemberT = 2;
 
 	/**
 	 * @param event
 	 * 
 	 *            sets the imageView 1 to the size 207 and 570 and disable the
-	 *            imageView 2
+	 *            imageView 2 for the open Month
 	 */
 	@FXML
 	public void template1(ActionEvent event) {
@@ -197,7 +195,7 @@ public class ShowController {
 	 * @param event
 	 * 
 	 *            sets the imageView 1 to the size 207 and 276 and the imageView
-	 *            2 to the same size
+	 *            2 to the same size for the open Month
 	 */
 	@FXML
 	public void template2(ActionEvent event) {
@@ -364,7 +362,9 @@ public class ShowController {
 	 * 
 	 *            create a PDF with the PDFBox for every Month and creates the
 	 *            Calendar under it
+	 *            The PDF export works but the Picture are not the corect one and the Calendar under it does not create 
 	 */
+	@SuppressWarnings("deprecation")
 	public void export(ActionEvent event) {
 		date = textjear.getText();
 		try {
@@ -374,6 +374,21 @@ public class ShowController {
 				String fileName = "Calendar_" + date + ".pdf";
 				try {
 					PDDocument doc = new PDDocument();
+					PDPage page1 = new PDPage();
+					PDPageContentStream content1 = new PDPageContentStream(doc, page1);
+					doc.addPage(page1);
+					content1.beginText();
+					content1.setFont(PDType1Font.HELVETICA, 26);
+					content1.moveTextPositionByAmount(220, 650);
+					content1.drawString("Caledar");
+					content1.endText();
+
+					content1.beginText();
+					content1.setFont(PDType1Font.HELVETICA, 26);
+					content1.moveTextPositionByAmount(220, 500);
+					content1.drawString("Year: " + textjear.getText());
+					content1.endText();
+					content1.close();
 					int i = 0;
 					while (i <= 11) {
 						PDPage page = new PDPage();
@@ -506,21 +521,26 @@ public class ShowController {
 							}
 							break;
 						}
-						
 						content.beginText();
 						content.setFont(PDType1Font.HELVETICA, 26);
 						content.moveTextPositionByAmount(220, 750);
 						content.drawString(month);
-						
-						if(template==1){
-//						File file = new File(PictrueI1);
-							System.out.println("T1");
-							System.out.println(PictrueI1);
-						}else if(template==2){
-							System.out.println("T2");
-							System.out.println(PictrueI2);
-						}
 						content.endText();
+
+						if (template == 1) {
+							// File file = new File(PictrueI1);
+							String test = "";
+							PDImageXObject pdImage = PDImageXObject.createFromFile(test, doc);
+							content.drawXObject(pdImage, 30, 300, 550, 300);
+						} else if (template == 2) {
+							String test = "";
+							PDImageXObject pdImage = PDImageXObject.createFromFile(test, doc);
+							content.drawXObject(pdImage, 300, 300, 270, 300);
+
+							String test2 = "";
+							PDImageXObject pdImage2 = PDImageXObject.createFromFile(test2, doc);
+							content.drawXObject(pdImage2, 30, 300, 270, 300);
+						}
 						i++;
 						content.close();
 					}

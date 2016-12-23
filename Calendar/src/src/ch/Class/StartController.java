@@ -1,5 +1,7 @@
 package src.ch.Class;
-
+/**
+ * @author Patrick Gartenmann
+ */
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
